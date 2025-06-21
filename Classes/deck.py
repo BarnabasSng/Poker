@@ -1,6 +1,11 @@
-import card, random
+"""Class module for a deck of 52 cards"""
+
+import random
+import card
 
 class Deck:
+    """Class representing a deck of 52 cards"""
+
     suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
 
     def __init__(self):
@@ -8,6 +13,6 @@ class Deck:
         random.shuffle(self.cards)
 
     def deal(self, num: int) -> list:
+        """Function to deal specified number of cards"""
+
         return [self.cards.pop() for _ in range(num)]
-    
-    
